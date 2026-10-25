@@ -47,7 +47,7 @@ repository's README and licensing notes before relying on a workflow in producti
 | [RunPod orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | Pod bootstrapping and remote worker orchestration | Historical scripts with documented limits |
 | [OSF Backup](https://github.com/OpenSourceFilms/osf-backup) | Selective, auditable storage backup and restore | Production-derived; environment-specific |
 | [OSF Viewer](https://github.com/OpenSourceFilms/osf-viewer) | Local universal file inspection and previews | Environment-specific utility |
-| [DeepSeek agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | Research and delegation helper scripts | Published tool; check current maintenance status |
+| [DeepSeek agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | Research and delegation helper scripts | Historical; no longer in OSF's active agent stack |
 
 ### Other research and project history
 
@@ -68,6 +68,7 @@ Source-code licenses do not automatically cover third-party models, pretrained w
 ## Links
 
 - [Runpod](https://www.runpod.io/)
-- Website, film/production channel, YouTube: not yet added here, pending Daniel's preferred links.
+- [Open Source Films website](https://opensourcefilms.org/).
+- Film/production channel and YouTube links: not added here.
 - Contribution guidance: see each repo's own `CONTRIBUTING.md` where present.
 - Contact: not yet added here, pending a public contact route Daniel is comfortable with.
