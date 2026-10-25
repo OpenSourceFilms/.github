@@ -73,6 +73,10 @@ These can be read or tested without access to our feature-film media:
   offline structural checks for both API and editor exports; tests cover all 16 published graphs.
 - [Audit native ComfyUI PNG outputs](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/blob/main/docs/audit-native-png-sequence.md):
   read-only file hashes, count, PNG CRC and optional geometry checks. Does not alter, decode or composite images.
+- [Check ComfyUI export publication safety](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/blob/main/docs/publication-hygiene.md):
+  an offline, redacted diagnostic for common private paths, endpoints, credentials and embedded preview caches.
+- [Try ERF's explicit outcome journal](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-outcome-journal.md):
+  a self-contained Python/SQLite example of stage statuses and derived projections, using synthetic inputs and temporary storage only.
 - [Fleet GPU scheduling design](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-gpu-scheduling.md):
   host discovery, native VRAM reservations, duplicate-job avoidance and delivery-evidence boundaries.
   This is architecture guidance, not the private deployed broker.
