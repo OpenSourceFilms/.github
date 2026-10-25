@@ -5,6 +5,14 @@ backing, a psychological character drama with genre and fantastical elements. Be
 production can't rely on a studio's editorial, VFX, or infrastructure teams, we build the tools we
 need ourselves, and release the ones that are broadly useful.
 
+## Credit to upstream researchers and developers
+
+Much of OSF's engineering is **integration, testing, adaptation and publication of workflows using other people's research and software**. We do not claim to have invented the underlying AI models, tracking algorithms, rendering engines, numerical libraries or upstream custom nodes. OSF's own contributions are the specific code, post-processing, engineering, test methods and documentation identified in each repository.
+
+For example, our video-restoration experiments depend on [ByteDance Seed's SeedVR and SeedVR2](https://github.com/ByteDance-Seed/SeedVR), with ComfyUI integrations including [NumZ, Adrien Toupet (AInVFX) and contributors' SeedVR2 package](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler). Our STAB4 work is an **experimental temporal post-processor applied to enhanced frames**, not a new restoration model or a replacement for their work.
+
+Each repository should identify upstream authors and licences prominently. OSF's licence covers only its own original contributions and never relicenses third-party code, weights, models or media.
+
 ## Why these tools exist
 
 A small production still has to solve the same problems a large one does:
