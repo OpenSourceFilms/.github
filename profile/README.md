@@ -45,7 +45,7 @@ repository's README and licensing notes before relying on a workflow in producti
 |---|---|---|
 | [Baton](https://github.com/OpenSourceFilms/opensourcefilms-baton) | Preserve AI-assisted development state across session boundaries | Initial public release |
 | [RunPod orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | Pod bootstrapping and remote worker orchestration | Historical scripts with documented limits |
-| [OSF Backup](https://github.com/OpenSourceFilms/osf-backup) | Selective, auditable storage backup and restore | Production-derived; environment-specific |
+| [OSF Backup](https://github.com/OpenSourceFilms/osf-backup) | Selective, auditable content-addressed backup design | Historical implementation; not a current deployment guide |
 | [OSF Viewer](https://github.com/OpenSourceFilms/osf-viewer) | Local universal file inspection and previews | Environment-specific utility |
 | [DeepSeek agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | Research and delegation helper scripts | Historical; no longer in OSF's active agent stack |
 
