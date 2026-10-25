@@ -22,36 +22,48 @@ GPU development and processing for much of this toolchain happens in collaborati
 whose on-demand infrastructure makes it practical for a small independent production to access
 large-VRAM and newer GPU hardware only when it's actually needed, rather than owning it outright.
 
-## Projects
+## Public projects
 
-**[opensourcefilms-erf](https://github.com/OpenSourceFilms/opensourcefilms-erf)**: Editorial
-Retrieval Fabric, the current, canonical media-intelligence system. Ingests footage, enriches it
-with audio and visual analysis, builds a semantic index, and supports short-form and narrative edit
-assembly. *Status: active development, initial public release.*
+These repositories document working tools, development prototypes and research. Read each
+repository's README and licensing notes before relying on a workflow in production.
 
-**[opensourcefilms-platelock](https://github.com/OpenSourceFilms/opensourcefilms-platelock)**: a VFX
-tool that locks an AI-generated clean plate back onto original footage via point tracking and
-exports STMaps for Nuke. *Status: work in progress, initial public release.*
+### Film production and VFX
 
-**[opensourcefilms-comfyui-workflows](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows)**:
-production ComfyUI workflow graphs, pinned dependency documentation, and our own optical-flow
-mask-propagation custom node. *Status: initial public release.*
+| Repository | Purpose | Current published maturity |
+|---|---|---|
+| [Editorial Retrieval Fabric (ERF)](https://github.com/OpenSourceFilms/opensourcefilms-erf) | Media analysis, semantic retrieval and editorial assembly | Active development; initial public release |
+| [PlateLock](https://github.com/OpenSourceFilms/opensourcefilms-platelock) | Register generated clean plates to original footage; Nuke STMaps | Work in progress |
+| [ComfyUI workflows](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows) | Production-oriented graph recipes and OSF custom nodes | Initial public release; workflow-specific licensing |
+| [OrbitTurn / H3](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn) | Camera-motion-guided video generation experiments | Experimental / production tooling |
+| [Video edit method bench](https://github.com/OpenSourceFilms/opensourcefilms-video-edit-method-bench) | Reproducible comparisons of video-editing methods | Research evaluation, not a finished pipeline |
+| [Motion generation tests](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests) | Compatibility and results for motion-generation models | Research snapshot |
+| [Three-camera HDR](https://github.com/OpenSourceFilms/opensourcefilms-three-camera-hdr) | Low-cost multi-camera HDR capture concept | Design only; not built or measured |
 
-**[opensourcefilms-baton](https://github.com/OpenSourceFilms/opensourcefilms-baton)**: a Claude Code
-session-continuity tool. Survives context compaction, `/clear`, restarts, and model switches. Grew
-out of the same production engineering environment as the rest of this tooling. *Status: initial
-public release.*
+### Infrastructure and development tools
 
-**[opensourcefilms-tools](https://github.com/OpenSourceFilms/opensourcefilms-tools)**: an earlier
-generation of the media-retrieval pipeline, superseded by erf. Kept public for its development
-lineage. *Status: development snapshot, not actively maintained as a separate product.*
+| Repository | Purpose | Current published maturity |
+|---|---|---|
+| [Baton](https://github.com/OpenSourceFilms/opensourcefilms-baton) | Preserve AI-assisted development state across session boundaries | Initial public release |
+| [RunPod orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | Pod bootstrapping and remote worker orchestration | Historical scripts with documented limits |
+| [OSF Backup](https://github.com/OpenSourceFilms/osf-backup) | Selective, auditable storage backup and restore | Production-derived; environment-specific |
+| [OSF Viewer](https://github.com/OpenSourceFilms/osf-viewer) | Local universal file inspection and previews | Environment-specific utility |
+| [DeepSeek agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | Research and delegation helper scripts | Published tool; check current maintenance status |
 
-## Status labels used above
+### Other research and project history
 
-- **Active development**: changing regularly, in step with the production.
-- **Initial public release**: published and usable, expect rough edges.
-- **Work in progress**: functional but incomplete.
-- **Development snapshot**: kept for reference, not the current recommended entry point.
+| Repository | Purpose | Current published maturity |
+|---|---|---|
+| [BikeMatch](https://github.com/OpenSourceFilms/opensourcefilms-bikematch) | Privacy-conscious stolen-bicycle matching concept and code | Early development; not deployed |
+| [Earlier filmmaking tools](https://github.com/OpenSourceFilms/opensourcefilms-tools) | Predecessor of the present ERF implementation | Superseded development snapshot |
+
+## Reading the status labels
+
+- **Active development / initial public release:** published code, changing interfaces, limited general installation support.
+- **Work in progress / experimental:** partial implementations or methods under evaluation, not a general production guarantee.
+- **Research snapshot / design only:** documentation or evaluation evidence, not a complete operational product.
+- **Environment-specific / historical:** useful engineering examples that may require significant adaptation.
+
+Source-code licenses do not automatically cover third-party models, pretrained weights, media or upstream custom nodes. See each repository's specific license and dependency documentation.
 
 ## Links
 
