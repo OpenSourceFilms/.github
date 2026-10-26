@@ -39,9 +39,9 @@ graphs, imagery, data, or any other material with separate rights.
 general reuse licence pending owner review, and one organisation-profile
 documentation repository.
 
-## Follow-up exact-`main` CI verification: 27 October 2026
+## Post-merge exact-`main` CI verification: 27 October 2026
 
-A later read-only repository/Actions API comparison checked each public
+A post-merge read-only repository/Actions API comparison checked each public
 repository's **current `main` branch commit SHA** against the
 `head_sha`, completion status and conclusion of recent **push**-triggered
 GitHub Actions runs. At this checkpoint:
@@ -56,12 +56,13 @@ GitHub Actions runs. At this checkpoint:
   and is excluded from the 17 code-repository denominator.
 - This **supersedes only the older 14/17 point-in-time CI comparison below**.
   The older result described an earlier set of head commits, not failures
-  that remain outstanding.
+  that remain outstanding. This checkpoint also incorporates the merged
+  BASICS, Viewer, ComfyUI and retired-DeepSeek hardening changes.
 
 | Public code repository | Verified `main` SHA prefix | Exact-commit run |
 |---|---|---|
 | [opensourcefilms-tools](https://github.com/OpenSourceFilms/opensourcefilms-tools) | `48f4561` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-tools/actions/runs/40383169189) |
-| [opensourcefilms-comfyui-workflows](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows) | `5680ef1` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/actions/runs/40387352489) |
+| [opensourcefilms-comfyui-workflows](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows) | `aeef177` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/actions/runs/40415315601) |
 | [opensourcefilms-baton](https://github.com/OpenSourceFilms/opensourcefilms-baton) | `602369f` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-baton/actions/runs/40400128505) |
 | [opensourcefilms-erf](https://github.com/OpenSourceFilms/opensourcefilms-erf) | `0889133` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-erf/actions/runs/40396771707) |
 | [opensourcefilms-platelock](https://github.com/OpenSourceFilms/opensourcefilms-platelock) | `c2adbd6` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-platelock/actions/runs/40389541831) |
@@ -69,12 +70,12 @@ GitHub Actions runs. At this checkpoint:
 | [opensourcefilms-orbitturn](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn) | `789283d` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn/actions/runs/40378943022) |
 | [opensourcefilms-motiongen-tests](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests) | `1c5533c` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests/actions/runs/40381836547) |
 | [opensourcefilms-runpod-orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | `cc450b1` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/actions/runs/40385024327) |
-| [opensourcefilms-deepseek-agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | `7870556` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent/actions/runs/40326792599) |
+| [opensourcefilms-deepseek-agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | `cb22fc3` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent/actions/runs/40419951647) |
 | [opensourcefilms-video-edit-method-bench](https://github.com/OpenSourceFilms/opensourcefilms-video-edit-method-bench) | `6a2720d` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-video-edit-method-bench/actions/runs/40412599497) |
 | [opensourcefilms-vsr-stab4](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4) | `779c0b4` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4/actions/runs/40397949219) |
-| [opensourcefilms-basics-auto](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto) | `823e329` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto/actions/runs/40369432897) |
+| [opensourcefilms-basics-auto](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto) | `b9c9598` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto/actions/runs/40414214863) |
 | [opensourcefilms-bts-ingest](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest) | `7437ec4` | [Successful exact-head run](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest/actions/runs/40412712795) |
-| [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | `00fb19c` | [Successful exact-head run](https://github.com/OpenSourceFilms/osf-viewer/actions/runs/40391568675) |
+| [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | `0290e84` | [Successful exact-head run](https://github.com/OpenSourceFilms/osf-viewer/actions/runs/40415608004) |
 | [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | `6405634` | [Successful exact-head run](https://github.com/OpenSourceFilms/osf-backup/actions/runs/40399243854) |
 
 **Evidence boundary:** GitHub reports successful completion of the configured
