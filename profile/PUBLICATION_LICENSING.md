@@ -41,14 +41,20 @@ documentation repository.
 
 ## Review findings and limits
 
-- **File inventory:** Complete GitHub recursive trees for the 17 public code
-  repositories were inspected for common model-weight and media file
+- **Current-tree media/fixture inventory:** Recursive trees of the 17
+  public code repositories were checked for common model and media
   extensions. No `.safetensors`, `.ckpt`, `.pth`, `.pt` or `.onnx` model
-  files were identified. One generated Kimodo `.npz` sample and a small WAV
-  file in the older tools archive were identified. This filename-based
-  inspection does **not** establish copyright provenance, inspect historical
-  Git blobs, or guarantee there are no embedded assets in text or unrecognised
-  formats.
+  checkpoints were identified in those current trees. Identified non-source
+  artifacts include one generated Kimodo `.npz` sample, one short WAV file
+  in the historical Tools archive, and **12 Office-format test fixtures**
+  (`.doc/.docx/.xls/.xlsx/.ppt/.pptx/.odt/.ods/.odp/.rtf` and corrupt test
+  files) under `osf-viewer/tests/fixtures/`. Viewer tests describe these
+  as hand-built synthetic samples; third-party template content or document
+  metadata **has not been independently audited**. Their provenance is
+  included in the unresolved [Viewer rights review](https://github.com/OpenSourceFilms/osf-viewer/issues/1).
+  This filename-based current-tree inspection does **not** establish
+  copyright ownership, search historical removed blobs exhaustively, or
+  rule out embedded content in unrecognised formats.
 - **Known attribution corrections:** Meta's SAM 3 custom terms are disclosed
   without calling them an OSI-approved permissive licence; adapted upstream
   Apache workflows retain author/source notices and a full licence copy.
