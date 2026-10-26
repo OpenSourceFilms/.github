@@ -88,6 +88,8 @@ These can be read or tested without access to our feature-film media:
   an offline, redacted diagnostic for common private paths, endpoints, credentials and embedded preview caches.
 - [Try ERF's explicit outcome journal](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-outcome-journal.md):
   a self-contained Python/SQLite example of stage statuses and derived projections, using synthetic inputs and temporary storage only.
+- [Run the offline GPU placement planner](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-admission-offline-demo.md):
+  17 synthetic tests for stale pods, native broker capacity, admission boundaries and duplicate jobs. It selects advisory candidates only; it does not allocate VRAM or launch jobs.
 - [Fleet GPU scheduling design](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-gpu-scheduling.md):
   host discovery, native VRAM reservations, duplicate-job avoidance and delivery-evidence boundaries.
   This is architecture guidance, not the private deployed broker.
