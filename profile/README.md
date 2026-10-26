@@ -42,6 +42,9 @@ repository's README and licensing notes before relying on a workflow in producti
 | [Editorial Retrieval Fabric (ERF)](https://github.com/OpenSourceFilms/opensourcefilms-erf) | Media analysis, semantic retrieval and editorial assembly | Active development; initial public release |
 | [PlateLock](https://github.com/OpenSourceFilms/opensourcefilms-platelock) | Register generated clean plates to original footage; Nuke STMaps | Work in progress |
 | [ComfyUI workflows](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows) | Production-oriented graph recipes and OSF custom nodes | Initial public release; workflow-specific licensing |
+| [STAB4 temporal stabilisation](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4) | Experimental temporal post-processing for externally enhanced frames, including SeedVR2 workflows; credits upstream research | Standalone synthetic-tested experimental release |
+| [BASICS mask and matte QC](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto) | CPU-based actor-mask ownership flags, alpha QC and review overlays | Initial offline-tested core, not full inference pipeline |
+| [BTS Ingest registry core](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest) | SQLite-backed media-intake metadata, provenance, state and quota logic | Initial offline-tested core, not an upload service |
 | [OrbitTurn / H3](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn) | Camera-motion-guided video generation experiments | Experimental / production tooling |
 | [Video edit method bench](https://github.com/OpenSourceFilms/opensourcefilms-video-edit-method-bench) | Reproducible comparisons of video-editing methods | Research evaluation, not a finished pipeline |
 | [Motion generation tests](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests) | Compatibility and results for motion-generation models | Research snapshot |
@@ -88,6 +91,10 @@ These can be read or tested without access to our feature-film media:
 - [Fleet GPU scheduling design](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-gpu-scheduling.md):
   host discovery, native VRAM reservations, duplicate-job avoidance and delivery-evidence boundaries.
   This is architecture guidance, not the private deployed broker.
+
+- [Test STAB4 on synthetic sequences](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4): the original OSF post-processor with full SeedVR2, ComfyUI and numerical-library attribution; no model weights or real shot footage.
+- [Check actor masks and mattes without GPU inference](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto): generated test frames, area/ownership checks, matte QC and review overlays.
+- [Explore the offline BTS intake registry](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest): synthetic SQLite and provenance tests, without a publicly deployable uploader.
 
 ## Links
 
