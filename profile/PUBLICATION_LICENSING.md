@@ -98,6 +98,29 @@ in repository history, or what a malicious pull request can do with a
 runner. No workflows, permissions or organisation settings were modified.
 Rerun this review after future CI changes.
 
+## Viewer redistribution evidence update: 27 October 2026
+
+The previously unlicensed [osf-viewer repository](https://github.com/OpenSourceFilms/osf-viewer)
+now has two additional **evidence-only** publication safeguards:
+
+- [A 12-file Office fixture inventory](https://github.com/OpenSourceFilms/osf-viewer/blob/main/docs/fixture-inventory.json)
+  records exact Git blob IDs and unresolved source/embedded-asset provenance.
+  [CI rejects unexpected file changes](https://github.com/OpenSourceFilms/osf-viewer/blob/main/scripts/verify_fixture_manifest.py);
+  a matching byte hash is **not** a redistribution licence or authorship proof.
+- [A version-specific 21-package Python dependency register](https://github.com/OpenSourceFilms/osf-viewer/blob/main/DEPENDENCY_LICENSES.md)
+  records **publisher-declared** licence metadata for every locked direct
+  dependency. It identifies `mutagen` as GPL-2.0-or-later, five
+  compression/archive dependencies as LGPL-2.1-or-later and `odfpy`'s
+  unresolved mixed-family licence metadata. Offline CI checks exact-pin
+  inventory coverage, **not** compliance with those licences.
+
+Neither item changes the **absence of a root Viewer reuse licence** or
+clears its Office binary fixtures. The [Viewer rights issue](https://github.com/OpenSourceFilms/osf-viewer/issues/1)
+and the [historical Backup rights issue](https://github.com/OpenSourceFilms/osf-backup/issues/1)
+remain open pending authorised code-contribution and third-party-material
+review. Do not infer that permission to run or view published source is
+permission to redistribute the full application or all dependency binaries.
+
 ## Review findings and limits
 
 - **Current-tree media/fixture inventory:** Recursive trees of the 17
