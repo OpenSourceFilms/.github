@@ -45,8 +45,10 @@ documentation repository.
   public code repositories were checked for common model and media
   extensions. No `.safetensors`, `.ckpt`, `.pth`, `.pt` or `.onnx` model
   checkpoints were identified in those current trees. Identified non-source
-  artifacts include one generated Kimodo `.npz` sample, one short WAV file
-  in the historical Tools archive, and **12 Office-format test fixtures**
+  artifacts include one generated Kimodo `.npz` sample, a one-second
+  **digital-silence WAV independently reproduced byte-for-byte** in the
+  [historical Tools archive](https://github.com/OpenSourceFilms/opensourcefilms-tools/blob/main/scripts/generate_silence_fixture.py)
+  (original committer's authorship not established), and **12 Office-format test fixtures**
   (`.doc/.docx/.xls/.xlsx/.ppt/.pptx/.odt/.ods/.odp/.rtf` and corrupt test
   files) under `osf-viewer/tests/fixtures/`. Viewer tests describe these
   as hand-built synthetic samples; third-party template content or document
