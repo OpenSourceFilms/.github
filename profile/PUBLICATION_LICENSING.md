@@ -69,6 +69,35 @@ projects are deployable, commercially cleared, GPU-tested or free of
 security issues. A CI pass only establishes the contract actually tested
 by that repository's workflow.
 
+## GitHub Actions static security snapshot: 27 October 2026
+
+The current public `main` trees contain **16 GitHub Actions YAML files**
+across the 17 public code repositories; the `opensourcefilms-three-camera-hdr`
+design-only repository has no Actions workflow. The organisation-profile
+`.github` repository has no Actions workflow either.
+
+A direct read of all 16 YAML definitions found:
+
+- All 16 explicitly scope the job token to `permissions: contents: read`.
+  None declares broader repository write permissions.
+- All **30 external `uses:` action occurrences** refer to full 40-character
+  commit SHAs rather than mutable release tags, covering the GitHub
+  Actions checkout/Python setup uses and the `astral-sh/setup-uv` use.
+- No `pull_request_target` or `workflow_run` privileged event triggers,
+  `write-all` grant, or direct `secrets.*` interpolation was found in
+  those workflow definitions.
+- The published jobs do include downloads of Python dependencies from
+  package indexes. Version pinning does not independently prove that
+  wheel contents are reproducible or satisfy licence/security obligations.
+
+**Limits:** This is a static review of current workflow YAML only. It
+does **not** audit arbitrary scripts that workflows execute, action-code
+contents at the pinned SHAs, transitive supply-chain integrity, historical
+branches, release assets, organisation Actions settings, secret exposure
+in repository history, or what a malicious pull request can do with a
+runner. No workflows, permissions or organisation settings were modified.
+Rerun this review after future CI changes.
+
 ## Review findings and limits
 
 - **Current-tree media/fixture inventory:** Recursive trees of the 17
