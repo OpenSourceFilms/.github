@@ -32,7 +32,7 @@ graphs, imagery, data, or any other material with separate rights.
 | [opensourcefilms-basics-auto](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto) | MIT for OSF core | Published CPU quality-control extract, not the upstream segmentation/matting models. |
 | [opensourcefilms-bts-ingest](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest) | MIT for OSF core | Published offline registry, not live uploader, B2 assets or contributor footage. |
 | [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | **No general reuse licence granted yet** | Ownership, attribution and licence decision in [issue #1](https://github.com/OpenSourceFilms/osf-viewer/issues/1). Public/source-visible is not automatically MIT. |
-| [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | **No general reuse licence granted yet** | Historical implementation. Ownership, attribution and licence decision in [issue #1](https://github.com/OpenSourceFilms/osf-backup/issues/1). |
+| [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | **No general reuse licence granted yet** | Historical implementation. All 14 pinned dependency source licences are inventoried in [DEPENDENCY_LICENSES.md](https://github.com/OpenSourceFilms/osf-backup/blob/main/DEPENDENCY_LICENSES.md), but this does **not** establish OSF code ownership or grant reuse rights. Owner/licence decision remains [issue #1](https://github.com/OpenSourceFilms/osf-backup/issues/1). |
 | [.github](https://github.com/OpenSourceFilms/.github) | No root licence; organisation documentation only | Do not infer a universal licence for organisational identity, logos or copied documentation. |
 
 **Inventory:** 18 public repositories, 15 with root MIT files, two with no
