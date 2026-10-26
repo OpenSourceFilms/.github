@@ -39,6 +39,36 @@ graphs, imagery, data, or any other material with separate rights.
 general reuse licence pending owner review, and one organisation-profile
 documentation repository.
 
+## Independent GitHub check: 27 October 2026
+
+A read-only GitHub inspection rechecked the organisation's 18 currently public
+repositories: 15 contain root `LICENSE` files with the standard MIT
+permission and preservation clauses and an Open Source Films 2026 copyright
+notice, two (`osf-viewer` and `osf-backup`) still have **no general reuse
+licence**, and `.github` is organisation-profile documentation without a root
+licence. This confirms the root-level inventory above; it does **not** prove
+OSF's chain of title, cover embedded assets or grant rights in third-party
+dependencies. The existing owner/licence issues remain open.
+
+Public GitHub Actions results were also compared against exact `main`
+commit SHAs for the **17 public code repositories**, at the time of review:
+
+- **14/17** had a completed successful run at the then-current `main` SHA.
+- `opensourcefilms-platelock`: latest successful run preceded two
+  README-only commits. This is **not** exact-head CI acceptance, and the
+  published workflow's CPU smoke contract does not validate GPU image quality.
+- `opensourcefilms-orbitturn`: latest successful run was on a **different
+  documentation-licensing commit branch** from `main` (siblings with the
+  same parent). The result is not exact-`main` acceptance.
+- `opensourcefilms-three-camera-hdr`: no GitHub Actions runs returned.
+  The repository describes a design, not measured hardware acceptance.
+
+The `.github` profile is not counted among those 17 code repositories.
+These are point-in-time publication checks, **not** evidence that all 17
+projects are deployable, commercially cleared, GPU-tested or free of
+security issues. A CI pass only establishes the contract actually tested
+by that repository's workflow.
+
 ## Review findings and limits
 
 - **Current-tree media/fixture inventory:** Recursive trees of the 17
