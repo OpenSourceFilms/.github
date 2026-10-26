@@ -39,6 +39,8 @@ large-VRAM and newer GPU hardware only when it's actually needed, rather than ow
 Some of our most reusable releases can be explored on an ordinary computer,
 using synthetic inputs instead of production footage, model weights or live services:
 
+- [Try a timestamped ERF footage search](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-footage-search.md): run the actual FTS5 lexical indexing/search code against invented transcripts and inspect synthetic HTML thumbnails. It is not semantic or visual retrieval.
+- [Reproduce PlateLock's before/after registration](https://github.com/OpenSourceFilms/opensourcefilms-platelock/blob/main/docs/try-registration-demo.md): generate a three-panel PNG from a known synthetic transform using PlateLock's own backward maps, without trackers or film footage.
 - [Validate ComfyUI workflow graphs](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/blob/main/docs/validate-workflows.md): check editor and API exports without launching ComfyUI or downloading models.
 - [Fingerprint a PNG source sequence](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4/blob/main/docs/sequence-inventory.md): a standard-library-only, read-only source inventory with 21 synthetic tests; it is not a PNG decoder or CRC audit.
 - [Try offline GPU admission planning](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-admission-offline-demo.md): test fail-closed placement decisions using 19 synthetic checks; nothing is scheduled or allocated.
@@ -102,6 +104,8 @@ These can be read or tested without access to our feature-film media:
   read-only file hashes, count, PNG CRC and optional geometry checks. Does not alter, decode or composite images.
 - [Check ComfyUI export publication safety](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/blob/main/docs/publication-hygiene.md):
   an offline, redacted diagnostic for common private paths, endpoints, credentials and embedded preview caches.
+- [Search synthetic ERF footage records](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-footage-search.md): executed SQLite FTS5 queries, timestamped JSON results and an optional local HTML report with invented thumbnails; no GPU inference or real video.
+- [Verify PlateLock synthetic registration visually](https://github.com/OpenSourceFilms/opensourcefilms-platelock/blob/main/docs/try-registration-demo.md): CPU-only real backward-map functions, original/misaligned/aligned panels and five regression tests; not tracker quality acceptance.
 - [Try ERF's explicit outcome journal](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-outcome-journal.md):
   a self-contained Python/SQLite example of stage statuses and derived projections, using synthetic inputs and temporary storage only.
 - [Run the offline GPU placement planner](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-admission-offline-demo.md):
