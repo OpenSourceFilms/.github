@@ -30,6 +30,18 @@ GPU development and processing for much of this toolchain happens in collaborati
 whose on-demand infrastructure makes it practical for a small independent production to access
 large-VRAM and newer GPU hardware only when it's actually needed, rather than owning it outright.
 
+## Start with an offline example
+
+Some of our most reusable releases can be explored on an ordinary computer,
+using synthetic inputs instead of production footage, model weights or live services:
+
+- [Validate ComfyUI workflow graphs](https://github.com/OpenSourceFilms/opensourcefilms-comfyui-workflows/blob/main/docs/validate-workflows.md): check editor and API exports without launching ComfyUI or downloading models.
+- [Fingerprint a PNG source sequence](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4/blob/main/docs/sequence-inventory.md): a standard-library-only, read-only source inventory with 21 synthetic tests; it is not a PNG decoder or CRC audit.
+- [Try offline GPU admission planning](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-admission-offline-demo.md): test fail-closed placement decisions using 19 synthetic checks; nothing is scheduled or allocated.
+
+Passing an offline test demonstrates only its documented contract. It does not
+qualify a model, a production workflow or real-world output quality.
+
 ## Public projects
 
 These repositories document working tools, development prototypes and research. Read each
@@ -54,8 +66,8 @@ repository's README and licensing notes before relying on a workflow in producti
 
 | Repository | Purpose | Current published maturity |
 |---|---|---|
-| [Baton](https://github.com/OpenSourceFilms/opensourcefilms-baton) | Preserve AI-assisted development state across session boundaries | Initial public release |
-| [RunPod orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | Pod bootstrapping and remote worker orchestration | Historical scripts with documented limits |
+| [Baton](https://github.com/OpenSourceFilms/opensourcefilms-baton) | Preserve AI-assisted development state across session boundaries | Offline-tested, environment-specific continuity hooks |
+| [RunPod orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | Pod bootstrapping, orchestration examples and offline GPU placement advice | Historical scripts plus tested reference planner, not a live scheduler |
 | [OSF Backup](https://github.com/OpenSourceFilms/osf-backup) | Selective, auditable content-addressed backup design | Historical implementation; not a current deployment guide |
 | [OSF Viewer](https://github.com/OpenSourceFilms/osf-viewer) | Local universal file inspection and previews | Environment-specific utility |
 | [DeepSeek agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | Research and delegation helper scripts | Historical; no longer in OSF's active agent stack |
@@ -89,12 +101,15 @@ These can be read or tested without access to our feature-film media:
 - [Try ERF's explicit outcome journal](https://github.com/OpenSourceFilms/opensourcefilms-erf/blob/main/docs/try-outcome-journal.md):
   a self-contained Python/SQLite example of stage statuses and derived projections, using synthetic inputs and temporary storage only.
 - [Run the offline GPU placement planner](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-admission-offline-demo.md):
-  17 synthetic tests for stale pods, native broker capacity, admission boundaries and duplicate jobs. It selects advisory candidates only; it does not allocate VRAM or launch jobs.
+  19 synthetic tests for stale pods, native broker capacity, admission boundaries, invalid timestamps and duplicate jobs. It selects advisory candidates only; it does not allocate VRAM or launch jobs.
 - [Fleet GPU scheduling design](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration/blob/main/docs/fleet-gpu-scheduling.md):
   host discovery, native VRAM reservations, duplicate-job avoidance and delivery-evidence boundaries.
   This is architecture guidance, not the private deployed broker.
 
 - [Test STAB4 on synthetic sequences](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4): the original OSF post-processor with full SeedVR2, ComfyUI and numerical-library attribution; no model weights or real shot footage.
+- [Inspect video-editing method workflow exports](https://github.com/OpenSourceFilms/opensourcefilms-video-edit-method-bench): offline structure checks for published ComfyUI editor and API graphs; not runtime or image-quality acceptance.
+- [Check the published motion-generation sample](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests/blob/main/tests/test_motiongen_published_sample.py): verify the public Kimodo NPZ array schema and launcher syntax with six CPU-only checks; does not generate motion.
+- [Exercise Baton's continuity-hook self-check](https://github.com/OpenSourceFilms/opensourcefilms-baton/blob/main/tests/selfcheck.sh): synthetic hook and redaction tests, without production transcripts. Redaction is best-effort and not a secret vault.
 - [Check actor masks and mattes without GPU inference](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto): generated test frames, area/ownership checks, matte QC and review overlays.
 - [Explore the offline BTS intake registry](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest): synthetic SQLite and provenance tests, without a publicly deployable uploader.
 
@@ -102,6 +117,4 @@ These can be read or tested without access to our feature-film media:
 
 - [Runpod](https://www.runpod.io/)
 - [Open Source Films website](https://opensourcefilms.org/).
-- Film/production channel and YouTube links: not added here.
 - Contribution guidance: see each repo's own `CONTRIBUTING.md` where present.
-- Contact: not yet added here, pending a public contact route Daniel is comfortable with.
