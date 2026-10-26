@@ -13,6 +13,10 @@ For example, our video-restoration experiments depend on [ByteDance Seed's SeedV
 
 Each repository should identify upstream authors and licences prominently. OSF's licence covers only its own original contributions and never relicenses third-party code, weights, models or media.
 
+For the current public-repository licence inventory, upstream rights boundaries
+and publication checklist, see our [public licensing and provenance register](PUBLICATION_LICENSING.md).
+Public code does not grant rights to separate model weights, media or third-party components.
+
 ## Why these tools exist
 
 A small production still has to solve the same problems a large one does:
