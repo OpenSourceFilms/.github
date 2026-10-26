@@ -23,7 +23,7 @@ graphs, imagery, data, or any other material with separate rights.
 | [opensourcefilms-platelock](https://github.com/OpenSourceFilms/opensourcefilms-platelock) | MIT for OSF originals | CoTracker3 is CC-BY-NC; SAM 3 has a custom agreement; other method/weight terms vary. |
 | [opensourcefilms-bikematch](https://github.com/OpenSourceFilms/opensourcefilms-bikematch) | MIT | Early-development application code; dependencies and data rights are separate. |
 | [opensourcefilms-three-camera-hdr](https://github.com/OpenSourceFilms/opensourcefilms-three-camera-hdr) | MIT | Concept documentation, no tested camera software/hardware release. |
-| [opensourcefilms-orbitturn](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn) | MIT for OSF originals | Several external models' weight terms remain explicitly unverified in THIRD_PARTY_LICENSES.md. |
+| [opensourcefilms-orbitturn](https://github.com/OpenSourceFilms/opensourcefilms-orbitturn) | MIT for OSF originals | **MiniMax H3 custom licence excludes the US, EU, UK and South Korea from its standard territory, including restrictions on use/display of generated Outputs**; international film exhibition/distribution may require separate permission. LTX 2.x has conditional commercial terms; Bernini and other weights remain unverified. See THIRD_PARTY_LICENSES.md. |
 | [opensourcefilms-motiongen-tests](https://github.com/OpenSourceFilms/opensourcefilms-motiongen-tests) | MIT for OSF originals and any rights OSF holds in synthetic sample | One generated Kimodo numeric sample, no model checkpoints; upstream GENMO and STMC have noncommercial restrictions. |
 | [opensourcefilms-runpod-orchestration](https://github.com/OpenSourceFilms/opensourcefilms-runpod-orchestration) | MIT | Public planner/tools, not a grant of rights to RunPod or external services. |
 | [opensourcefilms-deepseek-agent](https://github.com/OpenSourceFilms/opensourcefilms-deepseek-agent) | MIT | Retired helper; users obtain their own provider licences and access. |
@@ -57,6 +57,7 @@ documentation repository.
   verified file-by-file. A root MIT file is an OSF permission claim, not proof
   of chain of title. Resolve third-party contributors' rights before assuming
   OSF can relicense their expression.
+- **Geographic rights:** The [MiniMax H3 official agreement](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE) excludes the United States, European Union, United Kingdom and Republic of Korea from its standard licence territory. It restricts use and display of H3-generated Outputs outside that territory, not only hosting or transfer of weights. Australia is not listed as excluded, but generation location does not establish worldwide exhibition rights. Treat international production/distribution as requiring independent legal review or written authorisation. This source-level analysis does **not** conclude whether any particular LifeR footage or final release is licensed. 
 - **Model use versus model redistribution:** Separate licences may govern code,
   weights, model outputs, datasets and underlying media. Not bundling weights
   reduces redistribution risk; it does not automatically clear every use of
