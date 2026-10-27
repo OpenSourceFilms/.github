@@ -1,6 +1,6 @@
 # Public repository licensing and provenance register
 
-**Audit snapshot:** 26 October 2026. This is publication hygiene, not an
+**Audit snapshot:** 28 October 2026 (with earlier dated CI checkpoints preserved below). This is publication hygiene, not an
 opinion that every repository or downstream film use is legally cleared.
 The linked repository's own `LICENSE` and upstream rights govern each
 specific file and dependency. **OSF can license only rights it owns or has
@@ -31,13 +31,16 @@ graphs, imagery, data, or any other material with separate rights.
 | [opensourcefilms-vsr-stab4](https://github.com/OpenSourceFilms/opensourcefilms-vsr-stab4) | MIT for OSF postprocessor | SeedVR2, ComfyUI integrations, model weights and footage are external, not relicensed. |
 | [opensourcefilms-basics-auto](https://github.com/OpenSourceFilms/opensourcefilms-basics-auto) | MIT for OSF core | Published CPU quality-control extract, not the upstream segmentation/matting models. |
 | [opensourcefilms-bts-ingest](https://github.com/OpenSourceFilms/opensourcefilms-bts-ingest) | MIT for OSF core | Published offline registry, not live uploader, B2 assets or contributor footage. |
-| [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | **No general reuse licence granted yet** | Ownership, attribution and licence decision in [issue #1](https://github.com/OpenSourceFilms/osf-viewer/issues/1). Public/source-visible is not automatically MIT. |
-| [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | **No general reuse licence granted yet** | Historical implementation. All 14 pinned dependency source licences are inventoried in [DEPENDENCY_LICENSES.md](https://github.com/OpenSourceFilms/osf-backup/blob/main/DEPENDENCY_LICENSES.md), but this does **not** establish OSF code ownership or grant reuse rights. Owner/licence decision remains [issue #1](https://github.com/OpenSourceFilms/osf-backup/issues/1). |
+| [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | **MIT for OSF-controlled original source only** | [LICENSE](https://github.com/OpenSourceFilms/osf-viewer/blob/main/LICENSE) and [scope](https://github.com/OpenSourceFilms/osf-viewer/blob/main/LICENSING_SCOPE.md) expressly exclude 12 Office fixtures with unresolved provenance, external packages and other independently owned material. [Issue #1](https://github.com/OpenSourceFilms/osf-viewer/issues/1) tracks residual rights. |
+| [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | **MIT for OSF-controlled original source only** | [LICENSE](https://github.com/OpenSourceFilms/osf-backup/blob/main/LICENSE) and [scope](https://github.com/OpenSourceFilms/osf-backup/blob/main/LICENSING_SCOPE.md) do not relicense its 14 upstream dependencies or third-party material. Historical implementation only, not active B2/restic deployment. [Issue #1](https://github.com/OpenSourceFilms/osf-backup/issues/1) remains available for residual rights claims. |
 | [.github](https://github.com/OpenSourceFilms/.github) | No root licence; organisation documentation only | Do not infer a universal licence for organisational identity, logos or copied documentation. |
 
-**Inventory:** 18 public repositories, 15 with root MIT files, two with no
-general reuse licence pending owner review, and one organisation-profile
-documentation repository.
+**Inventory (28 October):** 18 public repositories, 17 with scoped root
+MIT grants for OSF-controlled originals, and one organisation-profile
+documentation repository without a root licence. The 12 Viewer binary
+fixtures and all independently owned components remain excluded; the
+publication of these two MIT grants is not a complete chain-of-title
+or dependency-redistribution clearance.
 
 ## Post-merge exact-`main` CI verification: 27 October 2026
 
@@ -86,7 +89,10 @@ upstream model/output permissions. Changing `main` requires a fresh
 exact-head comparison; treat this as a dated checkpoint, not continuous
 monitoring.
 
-## Independent GitHub check: 27 October 2026
+## Independent GitHub check: 27 October 2026 (historical checkpoint)
+
+The following 27 October inventory predates the 28 October Viewer and
+Backup MIT grants and is preserved as dated evidence, not current status.
 
 A read-only GitHub inspection rechecked the organisation's 18 currently public
 repositories: 15 contain root `LICENSE` files with the standard MIT
@@ -145,8 +151,9 @@ in repository history, or what a malicious pull request can do with a
 runner. No workflows, permissions or organisation settings were modified.
 Rerun this review after future CI changes.
 
-## Viewer redistribution evidence update: 27 October 2026
+## Viewer redistribution evidence update: 27 October 2026 (historical checkpoint)
 
+This dated section predates the scoped MIT grants recorded above.
 The previously unlicensed [osf-viewer repository](https://github.com/OpenSourceFilms/osf-viewer)
 now has two additional **evidence-only** publication safeguards:
 
