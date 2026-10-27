@@ -42,6 +42,22 @@ fixtures and all independently owned components remain excluded; the
 publication of these two MIT grants is not a complete chain-of-title
 or dependency-redistribution clearance.
 
+## Scoped licensing release checks: 28 October 2026
+
+The two repos changed by the scoped MIT release have independently verified
+source and CI evidence at **their merged main commits**:
+
+| Repository | Accepted main commit | GitHub Actions |
+|---|---|---|
+| [osf-viewer](https://github.com/OpenSourceFilms/osf-viewer) | [`ce1b07b`](https://github.com/OpenSourceFilms/osf-viewer/commit/ce1b07bef24a611ed331814dabb511b67f18ceaa) | [Successful main-branch workflow run 40512960250](https://github.com/OpenSourceFilms/osf-viewer/actions/runs/40512960250) |
+| [osf-backup](https://github.com/OpenSourceFilms/osf-backup) | [`4e48a39`](https://github.com/OpenSourceFilms/osf-backup/commit/4e48a39dbf764b1e1b63abf3e4407520a5fcd0f2) | [Successful main-branch workflow run 40512820340](https://github.com/OpenSourceFilms/osf-backup/actions/runs/40512820340) |
+
+This checks the defined repository workflows and published MIT/scope files,
+**not** live Viewer deployment, Backup recovery, ownership of Office fixtures,
+dependency licence compliance or rights to third-party media. The earlier
+16-repository exact-main CI checkpoint below remains dated 27 October;
+the other 14 repositories were not independently re-audited for this addendum.
+
 ## Post-merge exact-`main` CI verification: 27 October 2026
 
 A post-merge read-only repository/Actions API comparison checked each public
